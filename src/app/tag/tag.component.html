@@ -1,0 +1,4 @@
+<div class="tag">
+  <li>{{tagDataHolder.tag}}</li>
+  <tag-component [tagDataHolder]='subTagDataHolder' *ngFor='let subTagDataHolder of tagDataHolder.subTags'></tag-component>
+</div>
