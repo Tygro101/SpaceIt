@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { MainViewComponent } from './main-view/main-view.component';
 
 const routes: Routes = [
  {
    path: '',
    component: AppComponent,
    children: [
+      { path: 'main', component: MainViewComponent },
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'terms-and-conditions', component: TermsAndConditionsComponent }
    ]
