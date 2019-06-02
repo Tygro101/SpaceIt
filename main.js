@@ -39,6 +39,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _privacy_policy_privacy_policy_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./privacy-policy/privacy-policy.component */ "./src/app/privacy-policy/privacy-policy.component.ts");
 /* harmony import */ var _terms_and_conditions_terms_and_conditions_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./terms-and-conditions/terms-and-conditions.component */ "./src/app/terms-and-conditions/terms-and-conditions.component.ts");
+/* harmony import */ var _main_view_main_view_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./main-view/main-view.component */ "./src/app/main-view/main-view.component.ts");
+
 
 
 
@@ -50,6 +52,7 @@ var routes = [
         path: '',
         component: _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
         children: [
+            { path: 'main', component: _main_view_main_view_component__WEBPACK_IMPORTED_MODULE_6__["MainViewComponent"] },
             { path: 'privacy-policy', component: _privacy_policy_privacy_policy_component__WEBPACK_IMPORTED_MODULE_4__["PrivacyPolicyComponent"] },
             { path: 'terms-and-conditions', component: _terms_and_conditions_terms_and_conditions_component__WEBPACK_IMPORTED_MODULE_5__["TermsAndConditionsComponent"] }
         ]
@@ -89,7 +92,7 @@ module.exports = "\r\n<div #container class=\"container\">\r\n  <router-outlet><
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container {\n  background-color: #272727;\n  width: 100%;\n  height: 100%;\n  font-family: 'Baloo Da', cursive; }\n  .container .dot {\n    height: 10px;\n    width: 10px;\n    background-color: #ffffff;\n    border-radius: 50%;\n    display: inline-block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxSYW5cXERvY3VtZW50c1xcR2l0SHViXFxTcGFjZUl0L3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDSSx5QkFBeUI7RUFDekIsV0FBVztFQUNYLFlBQVk7RUFDWixnQ0FBZ0MsRUFBQTtFQUpwQztJQU9RLFlBQVk7SUFDWixXQUFXO0lBQ1gseUJBQXlCO0lBQ3pCLGtCQUFrQjtJQUNsQixxQkFBcUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG5cclxuLmNvbnRhaW5lcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMyNzI3Mjc7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIGZvbnQtZmFtaWx5OiAnQmFsb28gRGEnLCBjdXJzaXZlO1xyXG5cclxuICAgIC5kb3Qge1xyXG4gICAgICAgIGhlaWdodDogMTBweDtcclxuICAgICAgICB3aWR0aDogMTBweDtcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmO1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICAgIH1cclxufSJdfQ== */"
+module.exports = ".container {\n  background-color: #272727;\n  width: 100%;\n  height: 100%;\n  font-family: 'Baloo Da', cursive; }\n  .container .dot {\n    height: 10px;\n    width: 10px;\n    background-color: #ffffff;\n    border-radius: 50%;\n    display: inline-block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxSYW5cXERvY3VtZW50c1xcR2l0SHViXFxTcGFjZUl0L3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDSSx5QkFBeUI7RUFDekIsV0FBVztFQUNYLFlBQVk7RUFDWixnQ0FBZ0MsRUFBQTtFQUpwQztJQU9RLFlBQVk7SUFDWixXQUFXO0lBQ1gseUJBQXlCO0lBQ3pCLGtCQUFrQjtJQUNsQixxQkFBcUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG5cclxuLmNvbnRhaW5lcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMyNzI3Mjc7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIGZvbnQtZmFtaWx5OiAnQmFsb28gRGEnLCBjdXJzaXZlO1xyXG5cclxuICAgIC5kb3Qge1xyXG4gICAgICAgIGhlaWdodDogMTBweDtcclxuICAgICAgICB3aWR0aDogMTBweDtcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmO1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICAgIH1cclxufVxyXG5cclxuIl19 */"
 
 /***/ }),
 
@@ -163,6 +166,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _privacy_policy_privacy_policy_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./privacy-policy/privacy-policy.component */ "./src/app/privacy-policy/privacy-policy.component.ts");
 /* harmony import */ var _tag_tag_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tag/tag.component */ "./src/app/tag/tag.component.ts");
 /* harmony import */ var _terms_and_conditions_terms_and_conditions_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./terms-and-conditions/terms-and-conditions.component */ "./src/app/terms-and-conditions/terms-and-conditions.component.ts");
+/* harmony import */ var _main_view_main_view_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./main-view/main-view.component */ "./src/app/main-view/main-view.component.ts");
+
 
 
 
@@ -180,7 +185,8 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
                 _privacy_policy_privacy_policy_component__WEBPACK_IMPORTED_MODULE_5__["PrivacyPolicyComponent"],
                 _tag_tag_component__WEBPACK_IMPORTED_MODULE_6__["TagComponent"],
-                _terms_and_conditions_terms_and_conditions_component__WEBPACK_IMPORTED_MODULE_7__["TermsAndConditionsComponent"]
+                _terms_and_conditions_terms_and_conditions_component__WEBPACK_IMPORTED_MODULE_7__["TermsAndConditionsComponent"],
+                _main_view_main_view_component__WEBPACK_IMPORTED_MODULE_8__["MainViewComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -191,6 +197,62 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/main-view/main-view.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/main-view/main-view.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  main-view works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/main-view/main-view.component.scss":
+/*!****************************************************!*\
+  !*** ./src/app/main-view/main-view.component.scss ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21haW4tdmlldy9tYWluLXZpZXcuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/main-view/main-view.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/main-view/main-view.component.ts ***!
+  \**************************************************/
+/*! exports provided: MainViewComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainViewComponent", function() { return MainViewComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var MainViewComponent = /** @class */ (function () {
+    function MainViewComponent() {
+    }
+    MainViewComponent.prototype.ngOnInit = function () {
+    };
+    MainViewComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-main-view',
+            template: __webpack_require__(/*! ./main-view.component.html */ "./src/app/main-view/main-view.component.html"),
+            styles: [__webpack_require__(/*! ./main-view.component.scss */ "./src/app/main-view/main-view.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], MainViewComponent);
+    return MainViewComponent;
 }());
 
 
@@ -223,7 +285,7 @@ var TagType;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"header\">Privacy And Policy</div>\r\n    <div class=\"tags\">\r\n            <tag-component [tagDataHolder]='data' *ngFor='let data of tags'></tag-component>\r\n    </div>\r\n\r\n</div>"
+module.exports = "<div class=\"rout-container\">\r\n    <div class=\"header\">Privacy And Policy</div>\r\n    <div class=\"tags\">\r\n            <tag-component [tagDataHolder]='data' *ngFor='let data of tags'></tag-component>\r\n    </div>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -234,7 +296,7 @@ module.exports = "<div class=\"container\">\r\n    <div class=\"header\">Privacy
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container {\n  color: #ffffff;\n  text-align: center;\n  margin: 0 auto;\n  min-width: 50px;\n  max-width: 700px; }\n  .container .header {\n    font-size: 40px;\n    text-decoration: underline; }\n  .container .tags {\n    text-align: left; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJpdmFjeS1wb2xpY3kvQzpcXFVzZXJzXFxSYW5cXERvY3VtZW50c1xcR2l0SHViXFxTcGFjZUl0L3NyY1xcYXBwXFxwcml2YWN5LXBvbGljeVxccHJpdmFjeS1wb2xpY3kuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLGNBQWM7RUFDZCxlQUFlO0VBQ2YsZ0JBQWdCLEVBQUE7RUFMcEI7SUFPUSxlQUFlO0lBRWYsMEJBQTBCLEVBQUE7RUFUbEM7SUFZUSxnQkFBZ0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3ByaXZhY3ktcG9saWN5L3ByaXZhY3ktcG9saWN5LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRhaW5lcntcclxuICAgIGNvbG9yOiAjZmZmZmZmO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgICBtaW4td2lkdGg6IDUwcHg7XHJcbiAgICBtYXgtd2lkdGg6IDcwMHB4O1xyXG4gICAgLmhlYWRlcntcclxuICAgICAgICBmb250LXNpemU6IDQwcHg7XHJcbiAgICAgICAgLy9mb250LXN0eWxlOiBib2xkO1xyXG4gICAgICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xyXG4gICAgfVxyXG4gICAgLnRhZ3N7XHJcbiAgICAgICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIH1cclxufSJdfQ== */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3ByaXZhY3ktcG9saWN5L3ByaXZhY3ktcG9saWN5LmNvbXBvbmVudC5zY3NzIn0= */"
 
 /***/ }),
 
@@ -453,7 +515,7 @@ var TagComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"header\">Terms and Conditions</div>\r\n    <div class=\"Content\">{{content}}</div>\r\n    <div class=\"tags\">\r\n            <tag-component [tagDataHolder]='data' *ngFor='let data of tags'></tag-component>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"rout-container\">\r\n    <div class=\"header\">Terms and Conditions</div>\r\n    <div class=\"Content\">{{content}}</div>\r\n    <div class=\"tags\">\r\n            <tag-component [tagDataHolder]='data' *ngFor='let data of tags'></tag-component>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -464,7 +526,7 @@ module.exports = "<div class=\"container\">\r\n    <div class=\"header\">Terms a
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container {\n  margin: 0 auto;\n  min-width: 50px;\n  max-width: 700px;\n  color: #ffffff;\n  text-align: center; }\n  .container .header {\n    font-size: 40px;\n    text-decoration: underline; }\n  .container .tags {\n    margin-top: 20px;\n    text-align: left; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVybXMtYW5kLWNvbmRpdGlvbnMvQzpcXFVzZXJzXFxSYW5cXERvY3VtZW50c1xcR2l0SHViXFxTcGFjZUl0L3NyY1xcYXBwXFx0ZXJtcy1hbmQtY29uZGl0aW9uc1xcdGVybXMtYW5kLWNvbmRpdGlvbnMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxjQUFjO0VBQ2QsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixjQUFjO0VBQ2Qsa0JBQWtCLEVBQUE7RUFMdEI7SUFPUSxlQUFlO0lBRWYsMEJBQTBCLEVBQUE7RUFUbEM7SUFZUSxnQkFBZTtJQUNmLGdCQUFnQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvdGVybXMtYW5kLWNvbmRpdGlvbnMvdGVybXMtYW5kLWNvbmRpdGlvbnMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVye1xyXG4gICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgICBtaW4td2lkdGg6IDUwcHg7XHJcbiAgICBtYXgtd2lkdGg6IDcwMHB4O1xyXG4gICAgY29sb3I6ICNmZmZmZmY7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICAuaGVhZGVye1xyXG4gICAgICAgIGZvbnQtc2l6ZTogNDBweDtcclxuICAgICAgICAvL2ZvbnQtc3R5bGU6IGJvbGQ7XHJcbiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XHJcbiAgICB9XHJcbiAgICAudGFnc3tcclxuICAgICAgICBtYXJnaW4tdG9wOjIwcHg7XHJcbiAgICAgICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIH1cclxufSJdfQ== */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Rlcm1zLWFuZC1jb25kaXRpb25zL3Rlcm1zLWFuZC1jb25kaXRpb25zLmNvbXBvbmVudC5zY3NzIn0= */"
 
 /***/ }),
 
