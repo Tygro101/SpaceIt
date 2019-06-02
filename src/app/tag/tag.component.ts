@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, AfterViewInit, Renderer2, ElementRef } from '@angular/core';
 import { TagDataHolder } from '../models/tag-data-holder';
 
 @Component({
@@ -6,22 +6,28 @@ import { TagDataHolder } from '../models/tag-data-holder';
   templateUrl: './tag.component.html',
   styleUrls: ['./tag.component.scss']
 })
-export class TagComponent implements OnInit {
-
+export class TagComponent implements OnInit, AfterViewInit {
+  @ViewChild('text') tagComponent: ElementRef;
+  @Input() isSubTag: boolean = false;
   @Input() tagDataHolder: TagDataHolder;
   subTags: Array<TagDataHolder>;
-  test: Array<string>;
-  constructor() { 
+  constructor(private renderer: Renderer2, private element: ElementRef) { 
 
-    this.test = new Array<string>();
-    this.test.push("1");
-    this.test.push("2");
-    this.test.push("3");
-    this.test.push("4");
+  }
+  
+  ngAfterViewInit(){
+    if(this.isSubTag)
+    this.renderer.setStyle(this.tagComponent.nativeElement, 'padding-left', '30px'); 
   }
 
   ngOnInit() {
-    this.subTags = this.tagDataHolder.subTags;
+  }
+  
+  private addPadding(tagComponent: TagComponent): void{
+    if(this.isSubTag) {
+      console.log(this.element);
+      //this.renderer.setStyle(this.tagComponent.nativeElement, 'padding-left', '45px');
+    }
   }
 
 }
