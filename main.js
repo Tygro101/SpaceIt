@@ -568,7 +568,7 @@ var TermsAndConditionsComponent = /** @class */ (function () {
                 type: _models_tag_data_holder__WEBPACK_IMPORTED_MODULE_2__["TagType"].TITLE,
                 subTags: [
                     {
-                        tag: "SpaceIt it\u2019s mobile game based on player movement of the device, therefore the device may be damaged during the using of the app, first we are not commit it will work,\n                  and SpaceIt will NOT take any responsibility for any damage to the device that caused by the use of the app.",
+                        tag: "SpaceIt it\u2019s mobile game based on player movement of the device, therefore the device may be damaged during the using of the app, we are not commit it will work,\n                  and SpaceIt will NOT take any responsibility for any damage to the device that caused by the use of the app.\n                  The user takes full responsibility for all that relates to the use of this app",
                         subTags: [],
                         type: _models_tag_data_holder__WEBPACK_IMPORTED_MODULE_2__["TagType"].SUB_TITLE
                     },
